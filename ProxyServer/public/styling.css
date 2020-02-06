@@ -1,0 +1,18 @@
+/* #components {
+  display: flex;
+  flex-direction: row;
+} */
+
+
+#Pics {
+  position: absolute;
+  left: 12%;
+  height: 100%;
+  width: 100%;
+}
+
+#Scroller {
+  position: absolute;
+  left: 56%;
+  height: 100%;
+}
