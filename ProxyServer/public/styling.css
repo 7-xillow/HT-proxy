@@ -11,8 +11,8 @@
   width: 100%;
 }
 
-#Scroller {
-  position: absolute;
+#summary {
+  position: relative;
   left: 56%;
   height: 100%;
 }

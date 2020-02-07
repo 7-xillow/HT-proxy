@@ -38,7 +38,8 @@ app.get('/listings', (req, res) => {
 });
 
 app.get('/api/summary/data/:id', (req, res) => {
-  axios.get('http://localhost:3002/api/summary/data/:id')
+  const id = req.params.id;
+  axios.get(`http://localhost:3002/api/summary/data/${id}`)
   .then((response) => {
     res.send(response.data);
   })
