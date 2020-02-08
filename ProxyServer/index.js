@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, '/public/')));
 app.use(express.json());
 
 app.get('/houses', (req, res) => {
-  axios.get('http://localhost:3004/houses')
+  axios.get('http://18.144.88.205:3004/houses')
   .then((response) => {
     res.send(response.data);
   })
@@ -18,7 +18,7 @@ app.get('/houses', (req, res) => {
 });
 
 app.get('/seed', (req, res) => {
-  axios.get('http://localhost:3003/seed')
+  axios.get('http://18.223.108.8:3003/seed')
   .then((response) => {
     res.send(response.data);
   })
@@ -39,7 +39,7 @@ app.get('/listings', (req, res) => {
 
 app.get('/api/summary/data/:id', (req, res) => {
   const id = req.params.id;
-  axios.get(`http://localhost:3002/api/summary/data/${id}`)
+  axios.get(`http://3.17.76.247:3002/api/summary/data/${id}`)
   .then((response) => {
     res.send(response.data);
   })
