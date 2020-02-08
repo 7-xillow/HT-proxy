@@ -17,6 +17,17 @@ app.get('/houses', (req, res) => {
   })
 });
 
+app.get('/api/summary/data/:id', (req, res) => {
+  const id = req.params.id;
+  axios.get(`http://3.17.76.247:3002/api/summary/data/${id}`)
+  .then((response) => {
+    res.send(response.data);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+});
+
 app.get('/seed', (req, res) => {
   axios.get('http://18.223.108.8:3003/seed')
   .then((response) => {
@@ -37,15 +48,6 @@ app.get('/listings', (req, res) => {
   })
 });
 
-app.get('/api/summary/data/:id', (req, res) => {
-  const id = req.params.id;
-  axios.get(`http://3.17.76.247:3002/api/summary/data/${id}`)
-  .then((response) => {
-    res.send(response.data);
-  })
-  .catch((error) => {
-    console.log(error);
-  })
-});
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
