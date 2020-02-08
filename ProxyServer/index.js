@@ -39,7 +39,7 @@ app.get('/seed', (req, res) => {
 });
 
 app.get('/listings', (req, res) => {
-  axios.get('http://localhost:3001/listings')
+  axios.get('http://52.53.150.79:3001/listings')
   .then((response) => {
     res.send(response.data);
   })
